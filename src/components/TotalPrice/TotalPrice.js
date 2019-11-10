@@ -1,9 +1,15 @@
 import React from 'react';
 
-function TotalPrice() {
+function TotalPrice(props) {
+
+    let price = 0;
+            props.selectedIngredients.forEach(element => {
+                price+= element.price ;                
+            });
+
     return (
         <div>
-            TotalPrice
+            Total Price: {price} ₺      
         </div>
     );
 }
